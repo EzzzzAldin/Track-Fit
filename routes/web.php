@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DietPlan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 
@@ -13,3 +14,4 @@ Route::get('/jobs', [WebController::class, 'jobs'])->name('jobs');
 Route::get('/price', [WebController::class, 'price'])->name('price');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+Route::get('/diet-plan', [DietPlan::class, 'index'])->name('diet-plan');

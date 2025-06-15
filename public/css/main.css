@@ -1309,6 +1309,7 @@ footer .contact-info i {
 }
 
 .form-login h3,
+.diet-plan-info h2,
 .form-signup h3 {
     font-weight: bold;
     text-align: center;
@@ -1352,3 +1353,37 @@ footer .contact-info i {
 }
 
 /* End Login Page */
+
+/* Start Diet Plan Page */
+.diet-plan-section {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.diet-plan-info h2 {
+    font-size: 2.5rem;
+}
+
+.pdf-name {
+    background-color: #ccc;
+    padding: 20px 100px;
+    font-family: var(--title-font);
+    font-weight: 600;
+    color: var(--font-color);
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.diet-plan-info .buttons {
+    min-width: 20%;
+}
+
+.diet-plan-section .navbar-light {
+    box-shadow: none;
+}
+
+.diet-plan-section .active {
+    color: var(--main-color) !important;
+}
+
+/* End Diet Plan Page */

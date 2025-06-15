@@ -17,12 +17,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Niconne&family=Sniglet:wght@400;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Niconne&family=Sniglet:wght@400;800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Start Main Section -->
     <section class="female-main-section d-flex flex-column">
-        <div class="overlay"></div>
+        <div class="overlay-female"></div>
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -53,17 +68,15 @@
         <div class="container d-flex flex-column justify-content-center flex-grow-1">
             <div class="overlay-content">
                 <h1 class="title">
-                    <span class="line1">Together, we build</span><br />
-                    <span class="line2">a healthier community.</span>
+                    <span class="line1">Shape your body </span>
                 </h1>
-                <p class="description mt-3">
-                    Welcome to our gym, where we are dedicated to helping you achieve
-                    your fitness goals. With expert trainers and state-of-the-art
-                    equipment.
+                <p class="description mt-3 text-center w-75">
+                    Joining Fit Ladies not only improves your physical health and helps you get in shape, but it also
+                    enhances your mental well-being and overall lifestyle.
                 </p>
                 <div class="buttons mt-4 d-flex gap-3 flex-wrap">
-                    <a href="#" class="btn btn-main px-4 py-2">Our Packages</a>
-                    <a href="#" class="btn btn-gradient-outline px-4 py-2">
+                    <a href="#" class="btn subscribe-btn px-4 py-2">Get Started</a>
+                    <a href="#" class="btn female-btn px-4 py-2">
                         Get your free diet plan
                     </a>
                 </div>
@@ -71,100 +84,163 @@
         </div>
     </section>
     <!-- End Main Section -->
-    <!-- Start about Section -->
-    <section class="about section-white" id="about">
+    <!-- Start transform Section -->
+    <section class="transform section-white" id="transform">
         <div class="container my-5">
             <div class="row align-items-stretch" style="min-height: 400px">
                 <!-- Left Content -->
                 <div class="col-lg-6 d-flex flex-column justify-content-start mb-4 mb-lg-0">
                     <div class="w-100">
-                        <h2 class="about-title fw-bold mb-3">ABOUT US</h2>
-                        <p class="mt-5">
-                            Welcome to Our Gym, where fitness meets passion, and every drop
-                            of sweat tells a story of dedication. Our gym isn't just a place
-                            to work out; it's a community, a lifestyle, and a commitment to
-                            your well-being. We are committed to providing a safe,
-                            inclusive, and inspiring space for individuals of all ages and
-                            fitness levels. Whether you're a seasoned gym-goer or just
-                            starting, we are here to support you every step of the way.
-                        </p>
+                        <h2 class="mb-5">Transform Your Fitness</h2>
+
+                        <!-- Repeated Feature Blocks -->
+                        <div class="mb-4">
+                            <h5 class="fw-semibold">Nutrition programs tailored to you</h5>
+                            <p class="text-dark fw-medium mt-4">
+                                Our nutrition programs are customized to meet your individual needs, goals, preferences,
+                                dietary requirements, and daily schedule, with expert guidance from our team of
+                                professionals.
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-semibold">Nutrition programs tailored to you</h5>
+                            <p class="text-dark fw-medium mt-4">
+                                Our nutrition programs are customized to meet your individual needs, goals, preferences,
+                                dietary requirements, and daily schedule, with expert guidance from our team of
+                                professionals.
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-semibold">Nutrition programs tailored to you</h5>
+                            <p class="text-dark fw-medium mt-4">
+                                Our nutrition programs are customized to meet your individual needs, goals, preferences,
+                                dietary requirements, and daily schedule, with expert guidance from our team of
+                                professionals.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Right Image -->
                 <div class="col-lg-6 text-center">
-                    <img src="{{ asset('imgs/image 1.png') }}" alt="Fitness" class="img-fluid"
-                        style="max-height: 400px; object-fit: contain; width: 100%" />
+                    <img src="{{ asset('imgs/24663451_6967501 1.png') }}" alt="Transform Fitness" class="img-fluid"
+                        style="max-height: 100%; object-fit: contain; max-width: 100%" />
                 </div>
+            </div>
+
+            <!-- Centered Button Under Row -->
+            <div class="text-center mt-4">
+                <a href="#get-started" class="btn female-subscribe-btn px-5 py-3">Get Started</a>
             </div>
         </div>
     </section>
-    <!-- Start Our Service Section -->
-    <section class="our-services section-white">
+    <!-- Start ladies-stories Section -->
+    <section class="ladies-stories section-white py-5" id="ladies-stories">
         <div class="container">
-            <h2 class="service-title fw-bold mb-3">Our Service</h2>
-            <div class="row g-4 mt-2 our-services">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/In Progress.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Customized Programs" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Customized Programs</h5>
-                            <p class="card-text mt-3">
-                                Your training program is designed by our professionals with
-                                SST methodology based on your needs and data (food
-                                preferences, your working conditions.. )
-                            </p>
+            <h2 class="mb-5">Ladies Stories</h2>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card border shadow-sm h-100">
+                        <img src="{{ asset('imgs/image 791.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body border-pink text-center">
+                            <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
+                            <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
+                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/Pullups.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Fully training" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Fully training</h5>
-                            <p class="card-text mt-3">
-                                Not just bodybuilding! You'll definitely get the better shape
-                                with us, but moreover, our methodology qualifies you to be a
-                                better athlete in all respects.
-                            </p>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card border shadow-sm h-100">
+                        <img src="{{ asset('imgs/image 791.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body border-pink text-center">
+                            <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
+                            <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
+                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/In Progress.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Follow-up" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">
-                                You will get a follow-up all the time
-                            </h5>
-                            <p class="card-text mt-3">
-                                Through your chat on WhatsApp, you can contact nutrition,
-                                bodybuilding, injuries, flexibility, and fitness experts. we
-                                are with you the whole way.
-                            </p>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="card border shadow-sm h-100">
+                        <img src="{{ asset('imgs/image 791.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body border-pink text-center">
+                            <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
+                            <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
+                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Start Discover Section -->
-    <section class="discover section-white">
-        <div class="container">
-            <h2 class="discover-title fw-bold mb-3">
-                {{ $discover->address ?? ' - ' }}
-            </h2>
-            <p class="mt-2">
-                {{ $discover->description ?? ' - ' }}
-            </p>
-            <div class="full-width-image mt-5">
-                <video class="w-100" controls>
-                    <source src="{{ asset('storage/' . $discover->video) }}" type="video/mp4">
-                    Your browser does not support the video tag.
+
+    <!-- Start Subscription Section -->
+    <section class="subscription section-white mt-4 mb-5">
+        <div class="overlay-female"></div>
+        <div class="container d-flex flex-column align-items-center justify-content-center h-100 z-3">
+            <h2 class="mt-5">Subscription Steps</h2>
+            <div class="row mt-5 justify-content-center g-3">
+                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-center">
+                    <div class="step step-pink">
+                        <div class="outer-dots">
+                            <span class="dot left-dot"></span>
+                            <span class="dot right-dot"></span>
+                        </div>
+                        <div class="step-info">
+                            <span class="step-num">01</span>
+                            <span class="step-text">STEP</span>
+                        </div>
+                    </div>
+                    <h4>Register your data through the website</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-center">
+                    <div class="step step-yl">
+                        <div class="outer-dots">
+                            <span class="dot left-dot"></span>
+                            <span class="dot right-dot"></span>
+                        </div>
+                        <div class="step-info">
+                            <span class="step-num">02</span>
+                            <span class="step-text">STEP</span>
+                        </div>
+                    </div>
+                    <h4>We will contact you on WhatsApp</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-center">
+                    <div class="step step-gr">
+                        <div class="outer-dots">
+                            <span class="dot left-dot"></span>
+                            <span class="dot right-dot"></span>
+                        </div>
+                        <div class="step-info">
+                            <span class="step-num">03</span>
+                            <span class="step-text">STEP</span>
+                        </div>
+                    </div>
+                    <h4>You will send us your tests and measurements</h4>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center text-center">
+                    <div class="step step-sk">
+                        <div class="outer-dots">
+                            <span class="dot left-dot"></span>
+                            <span class="dot right-dot"></span>
+                        </div>
+                        <div class="step-info">
+                            <span class="step-num">04</span>
+                            <span class="step-text">STEP</span>
+                        </div>
+                    </div>
+                    <h4>We will deliver training and nutritional programs to you and stay with you step by </h4>
+                </div>
             </div>
+
         </div>
     </section>
     <!-- End Discover Section -->
@@ -738,7 +814,7 @@
                 navbar.classList.toggle("navbar-custom", !isWhite);
 
                 logo.src = isWhite ?
-                    "{{ asset('imgs/logo-female2.png') }}" :
+                    "{{ asset('imgs/logo (1).png') }}" :
                     "{{ asset('imgs/logo-female.png') }}";
             }
 

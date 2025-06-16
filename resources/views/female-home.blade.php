@@ -149,7 +149,10 @@
                         <div class="card-body border-pink text-center">
                             <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
                             <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
-                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
+                            <button class="btn female-subscribe-btn mt-3" data-bs-toggle="modal"
+                                data-bs-target="#storyModal1">
+                                Show Story
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -161,7 +164,10 @@
                         <div class="card-body border-pink text-center">
                             <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
                             <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
-                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
+                            <button class="btn female-subscribe-btn mt-3" data-bs-toggle="modal"
+                                data-bs-target="#storyModal2">
+                                Show Story
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +179,10 @@
                         <div class="card-body border-pink text-center">
                             <small class="fw-semibold d-block mb-1">Rania Ashraf</small>
                             <h6 class="fw-medium mb-2">6-Fold Improvement in Running Distances!</h6>
-                            <a href="#" class="btn female-subscribe-btn mt-3">Show Story</a>
+                            <button class="btn female-subscribe-btn mt-3" data-bs-toggle="modal"
+                                data-bs-target="#storyModal2">
+                                Show Story
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -245,7 +254,7 @@
     </section>
     <!-- End Discover Section -->
     <!-- Start Our Partners Section -->
-    <section class="our-partners section-white">
+    <section class="our-partners female-partners section-white">
         <h2 class="partners-title fw-bold mb-3">Our Partners</h2>
         <p>Proud of each of our partners</p>
         <div class="container my-5">
@@ -259,103 +268,8 @@
         </div>
     </section>
     <!-- End Our Partners Section -->
-    <!-- Start The Journey Section -->
-    <section class="journey section-white">
-        <div class="container">
-            <h2 class="journey-title fw-bold mb-3">The Journey</h2>
-            <div class="row g-4 text-center mt-5">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="custom-card p-4 h-100 text-start">
-                        <div class="card-number">1</div>
-                        <h5 class="mt-5 fw-bold">Tests and measurement</h5>
-                        <p class="mt-4">
-                            Our team will get in touch with you to take the required
-                            measurements and results of the tests to develop your program.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="custom-card p-4 h-100 text-start">
-                        <div class="card-number">2</div>
-                        <h5 class="mt-5 fw-bold">Receive your training program</h5>
-                        <p class="mt-4">
-                            Receive your customized training programs and start the journey
-                            of transformation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="custom-card p-4 h-100 text-start">
-                        <div class="card-number">3</div>
-                        <h5 class="mt-5 fw-bold">Tests and measurement</h5>
-                        <p class="mt-4">
-                            Our team will get in touch with you to take the required
-                            measurements and results of the tests to develop your program.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="custom-card p-4 h-100 text-start">
-                        <div class="card-number">4</div>
-                        <h5 class="mt-5 fw-bold">Receive your training program</h5>
-                        <p class="mt-4">
-                            Receive your customized training programs and start the journey
-                            of transformation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End The Journey Section -->
-    <!-- Start Training Programs Section -->
-    <section class="training position-relative section-white">
-        <div class="container">
-            <h2 class="training-title fw-bold mb-3">Training Programs</h2>
-            <p class="mt-5">What does the medical and sports team offer you?</p>
-            <div class="training-image-wrapper position-relative">
-                <div id="carouselTrainingText" class="carousel slide w-100" data-bs-ride="carousel"
-                    data-bs-interval="3000">
-                    <div class="carousel-inner text-center">
-                        @foreach ($trainingPrograms as $program)
-                            <div class="carousel-item {{ $loop->first ? 'active' : '' }} position-relative">
-                                <img src="{{ asset('storage/' . $program->image) }}" class="w-100 training-img"
-                                    alt="Training Image" />
-                                <div
-                                    class="training-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                                    <div class="text-center carousel-inner p-4">
-                                        <h2 class="fw-bold">{{ $program->title }}</h2>
-                                        <p class="mt-3">{{ $program->description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <button class="carousel-control-prev d-flex justify-content-start custom-carousel-btn"
-                        type="button" data-bs-target="#carouselTrainingText" data-bs-slide="prev">
-                        <i class="fa-solid fa-angles-left"></i>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next d-flex justify-content-end custom-carousel-btn"
-                        type="button" data-bs-target="#carouselTrainingText" data-bs-slide="next">
-                        <i class="fa-solid fa-angles-right"></i>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Training Programs Section -->
     <!-- Start Our Packages Section -->
-    <section class="our-packages section-white">
+    <section class="our-packages female-packages section-white">
         <h2 class="packages-title fw-bold mb-3">Our Packages</h2>
         <p>
             Choose the package that suits you and subscribe to it with simple steps
@@ -370,7 +284,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card">
                         <div class="image-wrapper position-relative">
-                            <img src="{{ asset('imgs/image 10.png') }}" alt="Card Image 1" class="img-fluid" />
+                            <img src="{{ asset('imgs/36087510_8353546 1.png') }}" alt="Card Image 1"
+                                class="img-fluid" />
                             <div class="price">100$</div>
                         </div>
                         <div class="custom-card-body">
@@ -391,7 +306,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card">
                         <div class="image-wrapper position-relative">
-                            <img src="{{ asset('imgs/image 10.png') }}" alt="Card Image 1" class="img-fluid" />
+                            <img src="{{ asset('imgs/36087510_8353546 1.png') }}" alt="Card Image 1"
+                                class="img-fluid" />
                             <div class="price">100$</div>
                         </div>
                         <div class="custom-card-body">
@@ -412,7 +328,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="custom-card">
                         <div class="image-wrapper position-relative">
-                            <img src="{{ asset('imgs/image 10.png') }}" alt="Card Image 1" class="img-fluid" />
+                            <img src="{{ asset('imgs/36087510_8353546 1.png') }}" alt="Card Image 1"
+                                class="img-fluid" />
                             <div class="price">100$</div>
                         </div>
                         <div class="custom-card-body">
@@ -432,163 +349,8 @@
         </div>
     </section>
     <!-- End Our Packages Section -->
-    <!-- Start Our Champions Section -->
-    <section class="our-champion">
-        <div class="container">
-            <h2 class="champion-title fw-bold mb-3">Our Champions' Stories</h2>
-            <div id="storyCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="5000">
-                <div class="carousel-inner">
-                    <!-- slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row align-items-center flex-column flex-md-row">
-                            <div class="col-12 col-md-12 col-lg-6 order-2 order-lg-1">
-                                <p class="lead">
-                                    Nutrition specialists always consider your preferences and
-                                    incorporate them into your meal plan, making the diet more
-                                    enjoyable," emphasized our champion today, Wael Habeib, aged
-                                    37. He stresses that the primary goal of a diet is to eat
-                                    healthily, enjoying what you love, while still achieving
-                                    your objectives through commitment to exercise schedules. In
-                                    4 months of Wael's dedication, we achieved: - Doubled
-                                    exercise weights. - Doubled fitness metrics. - Attained an
-                                    excellent body shape. - Reduced body fat percentage from 15%
-                                    to 7%. - Achieved a muscle mass of 47kg. Do you think you
-                                    can achieve similar results by committing to the programs we
-                                    design for you? Visit salahseleemteam.com.
-                                </p>
-                                <h5 class="mb-3">Wael Habeb</h5>
-                                <button class="btn btn-main px-4 py-2">Full Story</button>
-                            </div>
-                            <div
-                                class="col-12 col-md-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center mb-5">
-                                <img src="{{ asset('imgs/Frame 1261156237.png') }}" alt="Story Image"
-                                    class="rounded"
-                                    style="
-                      width: 100%;
-                      max-width: 560;
-                      aspect-ratio: 1 / 1;
-                      object-fit: cover;
-                    " />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- slide 2 -->
-                    <div class="carousel-item">
-                        <div class="row align-items-center flex-column flex-md-row">
-                            <div class="col-12 col-md-12 col-lg-6 order-2 order-lg-1">
-                                <p class="lead">
-                                    Nutrition specialists always consider your preferences and
-                                    incorporate them into your meal plan, making the diet more
-                                    enjoyable," emphasized our champion today, Wael Habeib, aged
-                                    37. He stresses that the primary goal of a diet is to eat
-                                    healthily, enjoying what you love, while still achieving
-                                    your objectives through commitment to exercise schedules. In
-                                    4 months of Wael's dedication, we achieved: - Doubled
-                                    exercise weights. - Doubled fitness metrics. - Attained an
-                                    excellent body shape. - Reduced body fat percentage from 15%
-                                    to 7%. - Achieved a muscle mass of 47kg. Do you think you
-                                    can achieve similar results by committing to the programs we
-                                    design for you? Visit salahseleemteam.com.
-                                </p>
-                                <h5 class="mb-3">Wael Habeb</h5>
-                                <button class="btn btn-main px-4 py-2">Full Story</button>
-                            </div>
-                            <div
-                                class="col-12 col-md-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center mb-5">
-                                <img src="{{ asset('imgs/Frame 1261156237.png') }}" alt="Story Image"
-                                    class="rounded"
-                                    style="
-                      width: 100%;
-                      max-width: 560;
-                      aspect-ratio: 1 / 1;
-                      object-fit: cover;
-                    " />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row align-items-center flex-column flex-md-row">
-                            <div class="col-12 col-md-12 col-lg-6 order-2 order-lg-1">
-                                <p class="lead">
-                                    Nutrition specialists always consider your preferences and
-                                    incorporate them into your meal plan, making the diet more
-                                    enjoyable," emphasized our champion today, Wael Habeib, aged
-                                    37. He stresses that the primary goal of a diet is to eat
-                                    healthily, enjoying what you love, while still achieving
-                                    your objectives through commitment to exercise schedules. In
-                                    4 months of Wael's dedication, we achieved: - Doubled
-                                    exercise weights. - Doubled fitness metrics. - Attained an
-                                    excellent body shape. - Reduced body fat percentage from 15%
-                                    to 7%. - Achieved a muscle mass of 47kg. Do you think you
-                                    can achieve similar results by committing to the programs we
-                                    design for you? Visit salahseleemteam.com.
-                                </p>
-                                <h5 class="mb-3">Wael Habeb</h5>
-                                <button class="btn btn-main px-4 py-2">Full Story</button>
-                            </div>
-                            <div
-                                class="col-12 col-md-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center mb-5">
-                                <img src="{{ asset('imgs/Frame 1261156237.png') }}" alt="Story Image"
-                                    class="rounded"
-                                    style="
-                      width: 100%;
-                      max-width: 560;
-                      aspect-ratio: 1 / 1;
-                      object-fit: cover;
-                    " />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row align-items-center flex-column flex-md-row">
-                            <div class="col-12 col-md-12 col-lg-6 order-2 order-lg-1">
-                                <p class="lead">
-                                    Nutrition specialists always consider your preferences and
-                                    incorporate them into your meal plan, making the diet more
-                                    enjoyable," emphasized our champion today, Wael Habeib, aged
-                                    37. He stresses that the primary goal of a diet is to eat
-                                    healthily, enjoying what you love, while still achieving
-                                    your objectives through commitment to exercise schedules. In
-                                    4 months of Wael's dedication, we achieved: - Doubled
-                                    exercise weights. - Doubled fitness metrics. - Attained an
-                                    excellent body shape. - Reduced body fat percentage from 15%
-                                    to 7%. - Achieved a muscle mass of 47kg. Do you think you
-                                    can achieve similar results by committing to the programs we
-                                    design for you? Visit salahseleemteam.com.
-                                </p>
-                                <h5 class="mb-3">Wael Habeb</h5>
-                                <button class="btn btn-main px-4 py-2">Full Story</button>
-                            </div>
-                            <div
-                                class="col-12 col-md-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-center mb-5">
-                                <img src="{{ asset('imgs/Frame 1261156237.png') }}" alt="Story Image"
-                                    class="rounded"
-                                    style="
-                      width: 100%;
-                      max-width: 560;
-                      aspect-ratio: 1 / 1;
-                      object-fit: cover;
-                    " />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-indicators mt-4">
-                    <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
     <!--Start Frequently Section -->
-    <section class="frequently section-white">
+    <section class="frequently frequently-female section-white">
         <div class="container">
             <h2 class="training-title fw-bold mb-3">
                 Frequently Asked Questions ?
@@ -617,114 +379,13 @@
         </div>
     </section>
     <!--End Frequently Section -->
-    <!--Start Client Section -->
-    <section class="client-says section-white">
-        <h2 class="client-title fw-bold mb-3">Client Says</h2>
-        <p>
-            In the videos, you will hear the opinions of some of our champions.
-            We're waiting to hear your opinion too, champ!
-        </p>
-        <div class="container py-5">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 1" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 2" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 3" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 4" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 5" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card">
-                        <img src="{{ asset('imgs/image 1.png') }}" class="card-img-top img-fluid" alt="Media 6" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Client Section -->
-    <!--Start Jobs Section -->
-    <section class="jobs section-white">
-        <div class="container">
-            <h2 class="jobs-title fw-bold mb-3">Browse Jobs</h2>
-            <div class="row g-4 mt-2 our-services">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/trainer 1.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Customized Programs" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Fitness Coaches</h5>
-                            <p class="card-text mt-3">2 jobs available</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/support 1.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Fully training" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Customer Service</h5>
-                            <p class="card-text mt-3">2 jobs available</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/trainer 1.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Customized Programs" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Fitness Coaches</h5>
-                            <p class="card-text mt-3">2 jobs available</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="card custom-card text-center p-3">
-                        <img src="{{ asset('imgs/support 1.png') }}" class="img-fluid mx-auto d-block custom-img"
-                            alt="Fully training" />
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Customer Service</h5>
-                            <p class="card-text mt-3">2 jobs available</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="#" class="btn subscribe-btn">Show All Jobs</a>
-            </div>
-        </div>
-    </section>
-    <!--End Jobs Section -->
     <!--Start Footer Section -->
-    <footer>
+    <footer class="footer-female">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <a class="navbar-brand mb-5" href="#">
-                        <img src="{{ asset('imgs/logo.png') }}" class="img-fluid" style="max-height: 80px" />
+                        <img src="{{ asset('imgs/logo-female.png') }}" class="img-fluid" style="max-height: 80px" />
                     </a>
                     <p class="info mt-5">
                         Join thousands of individuals in the strongest sports planning and
@@ -771,6 +432,157 @@
         </div>
     </footer>
     <!--End Footer Section -->
+    <!-- Modal -->
+    <div class="modal fade" id="storyModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Rania Ashraf</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <div class="row g-2 mb-3">
+                            <div class="col-6 position-relative">
+                                <div class="ratio ratio-1x1">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                                <div class="position-absolute btn-modal-before">Before</div>
+                            </div>
+                            <div class="col-6 position-relative">
+                                <div class="ratio ratio-1x1 position-relative">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                                <div class="position-absolute btn-modal-after">After</div>
+                            </div>
+                        </div>
+
+                        <h5 class="second-title text-start">Rania Ashraf</h5>
+                        <p class="fs-5 fw-normal text-muted text-start mt-3">
+                            Our champion, "Nesma Adel," a 33-year-old freelance chef, joined us 3 months ago with the
+                            goal of changing her lifestyle to a healthier one. Her work doesn't require significant
+                            physical effort on a daily basis, which posed one of the initial challenges we faced. We
+                            started learning more about Nesma's daily routine in order to design suitable programs for
+                            her, taking into consideration her Inbody results, measurements, and the tests we requested
+                            from her. Based on this information, we designed training programs and a nutrition plan that
+                            catered to her body's needs and her goals. Through her 3-month subscription with us, Nesma
+                            achieved remarkable progress. Exercising from home was more suitable for her, and we
+                            designed the training programs accordingly. Within these 3 months, Nesma improved her
+                            fitness level, flexibility, endurance, and running distances. She adopted a healthy
+                            lifestyle that was both enjoyable and compatible with her daily routine. Her body fat
+                            percentage decreased, and she lost 10 kilograms . Naturally, we provided daily support and
+                            maintained constant communication to address any challenges she faced. Her programs were
+                            consistently refined based on the results of each assessment. We take immense pride in
+                            Nesma's remarkable progress and value her commitment to our program. You can also take the
+                            first step towards a healthy lifestyle and becoming the best version of yourself by joining
+                            us. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="storyModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Rania Ashraf</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <div class="ratio ratio-1x1">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="ratio ratio-1x1">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="second-title text-start">Rania Ashraf</h5>
+                        <p class="fs-5 fw-normal text-muted text-start mt-3">
+                            Our champion, "Nesma Adel," a 33-year-old freelance chef, joined us 3 months ago with the
+                            goal of changing her lifestyle to a healthier one. Her work doesn't require significant
+                            physical effort on a daily basis, which posed one of the initial challenges we faced. We
+                            started learning more about Nesma's daily routine in order to design suitable programs for
+                            her, taking into consideration her Inbody results, measurements, and the tests we requested
+                            from her. Based on this information, we designed training programs and a nutrition plan that
+                            catered to her body's needs and her goals. Through her 3-month subscription with us, Nesma
+                            achieved remarkable progress. Exercising from home was more suitable for her, and we
+                            designed the training programs accordingly. Within these 3 months, Nesma improved her
+                            fitness level, flexibility, endurance, and running distances. She adopted a healthy
+                            lifestyle that was both enjoyable and compatible with her daily routine. Her body fat
+                            percentage decreased, and she lost 10 kilograms . Naturally, we provided daily support and
+                            maintained constant communication to address any challenges she faced. Her programs were
+                            consistently refined based on the results of each assessment. We take immense pride in
+                            Nesma's remarkable progress and value her commitment to our program. You can also take the
+                            first step towards a healthy lifestyle and becoming the best version of yourself by joining
+                            us. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="storyModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Rania Ashraf</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body text-center">
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <div class="ratio ratio-1x1">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="ratio ratio-1x1">
+                                    <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
+                                        alt="..." style="object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="second-title text-start">Rania Ashraf</h5>
+                        <p class="fs-5 fw-normal text-muted text-start mt-3">
+                            Our champion, "Nesma Adel," a 33-year-old freelance chef, joined us 3 months ago with the
+                            goal of changing her lifestyle to a healthier one. Her work doesn't require significant
+                            physical effort on a daily basis, which posed one of the initial challenges we faced. We
+                            started learning more about Nesma's daily routine in order to design suitable programs for
+                            her, taking into consideration her Inbody results, measurements, and the tests we requested
+                            from her. Based on this information, we designed training programs and a nutrition plan that
+                            catered to her body's needs and her goals. Through her 3-month subscription with us, Nesma
+                            achieved remarkable progress. Exercising from home was more suitable for her, and we
+                            designed the training programs accordingly. Within these 3 months, Nesma improved her
+                            fitness level, flexibility, endurance, and running distances. She adopted a healthy
+                            lifestyle that was both enjoyable and compatible with her daily routine. Her body fat
+                            percentage decreased, and she lost 10 kilograms . Naturally, we provided daily support and
+                            maintained constant communication to address any challenges she faced. Her programs were
+                            consistently refined based on the results of each assessment. We take immense pride in
+                            Nesma's remarkable progress and value her commitment to our program. You can also take the
+                            first step towards a healthy lifestyle and becoming the best version of yourself by joining
+                            us. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -814,7 +626,7 @@
                 navbar.classList.toggle("navbar-custom", !isWhite);
 
                 logo.src = isWhite ?
-                    "{{ asset('imgs/logo (1).png') }}" :
+                    "{{ asset('imgs/logo-female2.png') }}" :
                     "{{ asset('imgs/logo-female.png') }}";
             }
 

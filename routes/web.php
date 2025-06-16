@@ -2,6 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DietPlan;
+use App\Http\Controllers\DietPlanController;
+use App\Http\Controllers\Exercise;
+use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 
@@ -14,4 +18,6 @@ Route::get('/jobs', [WebController::class, 'jobs'])->name('jobs');
 Route::get('/price', [WebController::class, 'price'])->name('price');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
-Route::get('/diet-plan', [DietPlan::class, 'index'])->name('diet-plan');
+Route::get('/diet-plan', [DietPlanController::class, 'index'])->name('diet-plan');
+Route::get('/exercise', [ExerciseController::class, 'index'])->name('exercise');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');

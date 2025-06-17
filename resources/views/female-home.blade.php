@@ -36,38 +36,12 @@
 
 <body>
     <!-- Start Main Section -->
+    @include('layouts.header-female')
     <section class="female-main-section d-flex flex-column">
         <div class="overlay-female"></div>
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('imgs/logo-female.png') }}" class="img-fluid" style="max-height: 60px"
-                        id="navbar-logo-female" />
-                </a>
-
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Workout Programs</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Store</a></li>
-                    </ul>
-
-                    <a href="#" class="btn subscribe-btn">Subscribe</a>
-                </div>
-            </div>
-        </nav>
         <div class="container d-flex flex-column justify-content-center flex-grow-1">
             <div class="overlay-content">
-                <h1 class="title">
+                <h1 class="title text-center">
                     <span class="line1">Shape your body </span>
                 </h1>
                 <p class="description mt-3 text-center w-75">
@@ -75,7 +49,7 @@
                     enhances your mental well-being and overall lifestyle.
                 </p>
                 <div class="buttons mt-4 d-flex gap-3 flex-wrap">
-                    <a href="#" class="btn subscribe-btn px-4 py-2">Get Started</a>
+                    <a href="#" class="btn female-subscribe-btn px-4 py-2">Get Started</a>
                     <a href="#" class="btn female-btn px-4 py-2">
                         Get your free diet plan
                     </a>

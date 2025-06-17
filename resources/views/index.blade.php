@@ -22,33 +22,7 @@
 <body>
     <!-- Start Main Section -->
     <section class="main-section d-flex flex-column">
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('imgs/logo.png') }}" class="img-fluid" style="max-height: 60px"
-                        id="navbar-logo" />
-                </a>
-
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Workout Programs</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="">Recipes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Store</a></li>
-                    </ul>
-
-                    <a href="#" class="btn subscribe-btn">Subscribe</a>
-                </div>
-            </div>
-        </nav>
+        @include('layouts.header')
         <div class="container d-flex flex-column justify-content-center flex-grow-1">
             <div class="overlay-content">
                 <h1 class="title">
@@ -241,7 +215,7 @@
     </section>
     <!-- End The Journey Section -->
     <!-- Start Training Programs Section -->
-    <section class="training position-relative section-white">
+    <section class="training position-relative section-white" id="programs">
         <div class="container">
             <h2 class="training-title fw-bold mb-3">Training Programs</h2>
             <p class="mt-5">What does the medical and sports team offer you?</p>
@@ -280,7 +254,7 @@
     </section>
     <!-- End Training Programs Section -->
     <!-- Start Our Packages Section -->
-    <section class="our-packages section-white">
+    <section class="our-packages section-white" id="join">
         <h2 class="packages-title fw-bold mb-3">Our Packages</h2>
         <p>
             Choose the package that suits you and subscribe to it with simple steps
@@ -358,7 +332,7 @@
     </section>
     <!-- End Our Packages Section -->
     <!-- Start Our Champions Section -->
-    <section class="our-champion">
+    <section class="our-champion" id="transformations">
         <div class="container">
             <h2 class="champion-title fw-bold mb-3">Our Champions' Stories</h2>
             <div id="storyCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="5000">
@@ -524,13 +498,14 @@
                     <div class="accordion-item mb-3">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne{{$fqa->id}}" aria-expanded="false" aria-controls="collapseOne{{$fqa->id}}">
+                                data-bs-target="#collapseOne{{ $fqa->id }}" aria-expanded="false"
+                                aria-controls="collapseOne{{ $fqa->id }}">
                                 {{ $fqa->question ?? ' - ' }}
                                 <span class="accordion-icon"></span>
                             </button>
                         </h2>
-                        <div id="collapseOne{{$fqa->id}}" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
+                        <div id="collapseOne{{ $fqa->id }}" class="accordion-collapse collapse"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 {{ $fqa->answer ?? ' - ' }}
                             </div>
@@ -590,7 +565,7 @@
     </section>
     <!--End Client Section -->
     <!--Start Jobs Section -->
-    <section class="jobs section-white">
+    <section class="jobs section-white" id="career">
         <div class="container">
             <h2 class="jobs-title fw-bold mb-3">Browse Jobs</h2>
             <div class="row g-4 mt-2 our-services">
@@ -637,63 +612,13 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center">
-                <a href="#" class="btn subscribe-btn">Show All Jobs</a>
+                <a href="{{ route('jobs') }}" class="btn subscribe-btn">Show All Jobs</a>
             </div>
         </div>
     </section>
     <!--End Jobs Section -->
     <!--Start Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <a class="navbar-brand mb-5" href="#">
-                        <img src="{{ asset('imgs/logo.png') }}" class="img-fluid" style="max-height: 80px" />
-                    </a>
-                    <p class="info mt-5">
-                        Join thousands of individuals in the strongest sports planning and
-                        physical and health rehabilitation program that will help you
-                        reach the best version of yourself.
-                    </p>
-                    <div class="social mt-5">
-                        <h3>Follow us</h3>
-                        <div class="icons mt-3">
-                            <a class="m-1" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a class="m-1" href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a class="m-1" href="#"><i class="fa-brands fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mb-4 pages">
-                    <h5 class="mb-3">Pages</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Price</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <h5>Contact Us</h5>
-                    <div class="d-flex align-items-center mt-5 contact-info">
-                        <i class="fa-solid fa-phone me-4"></i>
-                        <span>+20 123 456 7890</span>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="d-flex align-items-center mt-5 contact-info">
-                        <i class="fas fa-envelope me-4"></i>
-                        <span>example@email.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('layouts.footer')
     <!--End Footer Section -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -709,42 +634,6 @@
         yearlyBtn.addEventListener("click", () => {
             yearlyBtn.classList.add("active");
             monthlyBtn.classList.remove("active");
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navbar = document.querySelector(".navbar");
-            const logo = document.getElementById("navbar-logo");
-
-            console.log(logo);
-
-            function isOverWhiteSection() {
-                const whiteSections = document.querySelectorAll(".section-white");
-                const navbarHeight = navbar.offsetHeight;
-
-                for (const section of whiteSections) {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
-                        return true;
-                    }
-                }
-                return false;
-            }
-
-            function updateNavbar() {
-                const isWhite = isOverWhiteSection();
-
-                navbar.classList.toggle("navbar-light", isWhite);
-                navbar.classList.toggle("navbar-custom", !isWhite);
-
-                logo.src = isWhite ?
-                    "{{ asset('imgs/logo (1).png') }}" :
-                    "{{ asset('imgs/logo.png') }}";
-            }
-
-            window.addEventListener("scroll", updateNavbar);
-            window.addEventListener("resize", updateNavbar);
-            updateNavbar();
         });
     </script>
 </body>

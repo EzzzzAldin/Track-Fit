@@ -52,12 +52,14 @@ body {
 
 .navbar-custom {
     background: rgba(0, 0, 0, 0);
+    z-index: 99999999;
 }
 
 .navbar-light {
     background: transparent;
     background-color: #f3f3f3;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 99999999;
 }
 
 .nav-link {
@@ -104,8 +106,9 @@ body {
     width: 100%;
 }
 
-.subscribe-btn {
-    background-color: var(--main-color);
+.subscribe-btn,
+.female-subscribe-btn {
+    background: linear-gradient(178deg, #28a228, #28a228);
     color: var(--secondary-color);
     transition: background 0.4s ease, color 0.4s ease;
     border: none;
@@ -160,13 +163,13 @@ body {
 }
 
 .btn-main {
-    background-color: var(--main-color);
+    background: linear-gradient(135deg, #28a228, #28a228);
     color: var(--secondary-color);
     border: none;
 }
 
 .btn-main:hover {
-    background-color: #28a428;
+    background: linear-gradient(178deg, #269626, #195a19);
 }
 
 .btn-gradient-outline {
@@ -177,7 +180,7 @@ body {
 }
 
 .btn-gradient-outline:hover {
-    background: var(--main-color) !important;
+    background: linear-gradient(135deg, #28a228, #28a228) !important;
     color: var(--secondary-color) !important;
 }
 
@@ -983,18 +986,22 @@ footer .contact-info i {
     color: var(--main-color);
 }
 
-.duration .selected {
-    border: 1px solid var(--main-color);
-    border-radius: 5px;
+.duration-details {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
 }
 
-.duration .selected {
-    border: 1px solid var(--main-color);
-    border-radius: 5px;
+.duration-details.selected {
+    border-color: var(--main-color);
 }
 
-.selected .save {
-    background: transparent;
+.duration-details .save {
+    transition: 0.3s ease;
+}
+
+.duration-details.selected .save {
     background: linear-gradient(178deg, #269626, #195a19);
     color: var(--secondary-color);
 }
@@ -1002,6 +1009,12 @@ footer .contact-info i {
 .box-payment {
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.box-payment.selected {
+    border: 1px solid var(--main-color);
 }
 
 .box-payment input {
@@ -1010,9 +1023,6 @@ footer .contact-info i {
 
 .form-check-input:checked {
     background-color: var(--main-color);
-}
-
-.form-check-input:checked {
     box-shadow: none;
 }
 
@@ -1236,11 +1246,6 @@ footer .contact-info i {
     font-weight: 600;
 }
 
-.result-free-plan {
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
-}
-
 .free-plan-form .close {
     font-weight: 600;
     font-size: 1.2rem;
@@ -1331,6 +1336,7 @@ footer .contact-info i {
 .form-login .sign,
 .form-signup .sign {
     color: var(--main-color);
+    text-decoration: none;
 }
 
 .form-login input,
@@ -1347,10 +1353,17 @@ footer .contact-info i {
 @media (max-width: 576px) {
     .form-login,
     .form-signup {
-        min-width: 100% !important;
-        width: 100%;
-        padding: 20px 15px;
+        min-width: 50% !important;
+        width: 80%;
         border-radius: 10px;
+    }
+
+    #editModal .form-signup {
+        width: 100% !important;
+    }
+
+    .form-login .fa-solid {
+        margin-top: 10px;
     }
 }
 
@@ -1381,11 +1394,11 @@ footer .contact-info i {
     min-width: 20%;
 }
 
-.diet-plan-section .navbar-light {
+.user-nav.navbar-light {
     box-shadow: none;
 }
 
-.diet-plan-section .active {
+.user-nav .active {
     color: var(--main-color) !important;
 }
 
@@ -1402,8 +1415,9 @@ footer .contact-info i {
 }
 
 .female-subscribe-btn,
-.female-main-section .subscribe-btn {
-    background-color: var(--main-color-female);
+.female-main-section .subscribe-btn-female {
+    background: transparent;
+    background-color: var(--main-color-female) !important;
 }
 
 .female-subscribe-btn:hover,
@@ -1414,7 +1428,11 @@ footer .contact-info i {
 }
 
 .female-main-section .female-btn {
-    background-color: var(--secondary-color);
+    background: linear-gradient(
+        178deg,
+        var(--secondary-color),
+        var(--secondary-color)
+    );
     color: var(--main-color-female);
     font-weight: 600;
 }
@@ -1780,4 +1798,87 @@ footer .contact-info i {
 .plan-header h4 {
     font-size: 2rem;
     font-weight: 600;
+}
+
+.active-plan {
+    align-self: center;
+    padding: 12px 40px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 1.2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.your-plan .card {
+    border: none;
+}
+
+.your-plan .card h4 {
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.your-plan .card .duration {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 400;
+}
+
+.date-package {
+    font-size: 1rem;
+    font-family: var(--title-font);
+    color: var(--font-color);
+}
+
+#editModal .iti.iti--allow-dropdown.iti--separate-dial-code {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .your-plan .card {
+        width: 100% !important;
+    }
+}
+
+/* Edits */
+.transform h2 {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.transform h5 {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    color: var(--main-color-female);
+}
+
+#applyModal .form-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.job-summary .subscribe-btn,
+.free-plan-section .subscribe-btn {
+    z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+    #dietResultModal .modal-dialog-scrollable .modal-content {
+        max-height: none !important;
+        overflow: auto !important;
+    }
+}
+
+.modal {
+    z-index: 999999999 !important;
+}
+.modal-backdrop {
+    z-index: 999999998 !important;
 }

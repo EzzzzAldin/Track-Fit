@@ -22,37 +22,14 @@
 </head>
 
 <body>
-    <section class="login-section d-flex flex-column justify-content-center align-items-center">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('imgs/logo (1).png') }}" class="img-fluid" style="max-height: 60px" />
-                </a>
-
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
-                        <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('index') }}#about">About</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Workout Programs</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Recipes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Store</a></li>
-                    </ul>
-
-                    <a href="#" class="btn subscribe-btn">Login</a>
-                </div>
-            </div>
-        </nav>
+    @include('layouts.header')
+    <section class="login-section d-flex flex-column justify-content-center align-items-center section-white">
         <h2 class="fw-bold whit-text">Login</h2>
         <div class="form-login mt-4">
             <h3 class="mb-3">Welcome Back!</h3>
-            <p>Don’t have an account ? <span class="sign">sign up</span></p>
+            <p>Don’t have an account ?
+                <a href="{{ route('signup') }}" class="sign">sign up</a>
+            </p>
             <form>
                 <div class="mb-3 mt-5">
                     <label for="phone" class="form-label">Your Phone</label>
@@ -76,57 +53,7 @@
 
     </section>
     <!--Start Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <a class="navbar-brand mb-5" href="#">
-                        <img src="{{ asset('imgs/logo.png') }}" class="img-fluid" style="max-height: 80px" />
-                    </a>
-                    <p class="info mt-5">
-                        Join thousands of individuals in the strongest sports planning and
-                        physical and health rehabilitation program that will help you
-                        reach the best version of yourself.
-                    </p>
-                    <div class="social mt-5">
-                        <h3>Follow us</h3>
-                        <div class="icons mt-3">
-                            <a class="m-1" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a class="m-1" href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a class="m-1" href="#"><i class="fa-brands fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mb-4 pages">
-                    <h5 class="mb-3">Pages</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Price</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <h5>Contact Us</h5>
-                    <div class="d-flex align-items-center mt-5 contact-info">
-                        <i class="fa-solid fa-phone me-4"></i>
-                        <span>+20 123 456 7890</span>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="d-flex align-items-center mt-5 contact-info">
-                        <i class="fas fa-envelope me-4"></i>
-                        <span>example@email.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('layouts.footer')
     <!--End Footer Section -->
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>

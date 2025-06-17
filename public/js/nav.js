@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
     const logo = document.getElementById("navbar-logo");
 
-    console.log(logo);
-
     function isOverWhiteSection() {
         const whiteSections = document.querySelectorAll(".section-white");
         const navbarHeight = navbar.offsetHeight;

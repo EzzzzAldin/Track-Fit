@@ -13,12 +13,10 @@
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3">
                 <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('female-home') }}">Ladies</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#join">Join Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#transformations">Transformations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ladies-stories">Transformations</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#career">Career</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('jobs') }}">Career</a></li>
             </ul>
 
             <a href="{{ route('login') }}" class="btn female-subscribe-btn">Login</a>

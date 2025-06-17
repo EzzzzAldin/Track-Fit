@@ -243,7 +243,7 @@
     </section>
     <!-- End Our Partners Section -->
     <!-- Start Our Packages Section -->
-    <section class="our-packages female-packages section-white">
+    <section class="our-packages female-packages section-white" id="join">
         <h2 class="packages-title fw-bold mb-3">Our Packages</h2>
         <p>
             Choose the package that suits you and subscribe to it with simple steps

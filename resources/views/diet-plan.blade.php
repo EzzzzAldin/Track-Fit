@@ -41,23 +41,6 @@
     <!--End Footer Section -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
-
-    <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "auto",
-            preferredCountries: ["sa", "eg", "ae", "jo", "kw"],
-            separateDialCode: true,
-            nationalMode: false,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js",
-            geoIpLookup: function(callback) {
-                // You can use a real IP lookup service here. For now, default to "sa".
-                callback("sa");
-            },
-        });
-    </script>
 </body>
 
 </html>

@@ -59,7 +59,7 @@
                     Explaining and clarifying the features of the service for users.
                 </li>
             </ul>
-            <hr class="w-50 mt-5 mb-5" />
+            <hr class="mt-5 mb-5" />
             <div class="requirement">
                 <ul class="mb-0 ps-3 mt-4">
                     <li>At least one year experience in the same position</li>

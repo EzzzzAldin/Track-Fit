@@ -54,8 +54,8 @@
                         </div>
                         <div class="mt-4">
                             <label for="message" class="form-label">Your Message</label>
-                            <input type="text" class="form-control" id="message"
-                                placeholder="Enter Your Message" />
+                            <textarea name="message" id="message" class="form-control border-success w-100" rows="4"
+                                placeholder="Type your message here..."></textarea>
                         </div>
                         <div class="buttons mt-5 d-flex gap-3 flex-wrap">
                             <a href="#" class="btn subscribe-btn px-4 py-2 w-100">Send</a>

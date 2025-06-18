@@ -33,7 +33,7 @@
             <form>
                 <div class="mb-3 mt-5">
                     <label for="phone" class="form-label">Your Phone</label>
-                    <input type="number" class="form-control" id="phone" placeholder="Enter Your Phone Number" />
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" />
                 </div>
                 <div class="mb-3 position-relative">
                     <label for="password" class="form-label">Password</label>

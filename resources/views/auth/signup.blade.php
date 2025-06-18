@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-12 col-md-6 mb-3 mt-5">
                         <label for="phone" class="form-label">Your Phone</label>
-                        <input type="number" class="form-control" id="phone"
+                        <input type="tel" class="form-control" id="phone"
                             placeholder="Enter Your Phone Number" />
                     </div>
                 </div>

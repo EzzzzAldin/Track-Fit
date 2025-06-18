@@ -50,4 +50,6 @@
     </div>
 </footer>
 
-<script src="{{ asset('js/nav.js') }}"></script>
+@unless (Route::is('diet-plan') || Route::is('exercise') || Route::is('profile'))
+    <script src="{{ asset('js/nav.js') }}"></script>
+@endunless

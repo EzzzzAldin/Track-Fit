@@ -469,17 +469,19 @@
 
                     <div class="modal-body text-center">
                         <div class="row g-2 mb-3">
-                            <div class="col-6">
+                            <div class="col-6 position-relative">
                                 <div class="ratio ratio-1x1">
                                     <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
                                         alt="..." style="object-fit: cover;">
                                 </div>
+                                <div class="position-absolute btn-modal-before">Before</div>
                             </div>
-                            <div class="col-6">
-                                <div class="ratio ratio-1x1">
+                            <div class="col-6 position-relative">
+                                <div class="ratio ratio-1x1 position-relative">
                                     <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
                                         alt="..." style="object-fit: cover;">
                                 </div>
+                                <div class="position-absolute btn-modal-after">After</div>
                             </div>
                         </div>
 
@@ -518,17 +520,19 @@
 
                     <div class="modal-body text-center">
                         <div class="row g-2 mb-3">
-                            <div class="col-6">
+                            <div class="col-6 position-relative">
                                 <div class="ratio ratio-1x1">
                                     <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
                                         alt="..." style="object-fit: cover;">
                                 </div>
+                                <div class="position-absolute btn-modal-before">Before</div>
                             </div>
-                            <div class="col-6">
-                                <div class="ratio ratio-1x1">
+                            <div class="col-6 position-relative">
+                                <div class="ratio ratio-1x1 position-relative">
                                     <img src="{{ asset('imgs/image 791.png') }}" class="img-fluid rounded"
                                         alt="..." style="object-fit: cover;">
                                 </div>
+                                <div class="position-absolute btn-modal-after">After</div>
                             </div>
                         </div>
 
@@ -556,6 +560,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

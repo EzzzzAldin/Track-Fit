@@ -16,9 +16,29 @@
                     <a class="nav-link active" href="{{ route('diet-plan') }}">Diet Plan</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a></li>
+                <li class="d-lg-none">
+                    <form method="POST" action="#">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>
+                </li>
             </ul>
 
-            <img src="{{ asset('imgs/image 792.png') }}" class="img-fluid" style="max-height: 60px" />
+            <div class="dropdown">
+                <img src="{{ asset('imgs/image 792.png') }}" class="img-fluid dropdown-toggle"
+                    style="max-height: 60px; cursor: pointer;" id="userDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false" />
+
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                    <li>
+                        <form method="POST" action="#">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

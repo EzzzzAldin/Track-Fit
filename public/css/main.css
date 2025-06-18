@@ -144,14 +144,14 @@ body {
 
 .title .line1 {
     font-family: var(--title-font);
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--secondary-color);
 }
 
 .title .line2 {
     font-family: var(--title-font);
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--main-color);
 }
@@ -609,6 +609,10 @@ body {
 @media (max-width: 991.98px) {
     .our-champion .lead {
         font-size: 1.25rem;
+    }
+
+    .navbar-collapse img {
+        display: none;
     }
 }
 
@@ -1869,10 +1873,203 @@ footer .contact-info i {
     z-index: 1;
 }
 
+hr {
+    width: 50%;
+}
+
+.user-nav .dropdown-item {
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--font-color);
+    border-radius: 5px;
+}
+
+.user-nav .dropdown-menu.show {
+    border: none;
+}
+
+.user-nav .dropdown-item:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+/* Resposive */
+
 @media (max-width: 767.98px) {
     #dietResultModal .modal-dialog-scrollable .modal-content {
         max-height: none !important;
         overflow: auto !important;
+    }
+
+    .training .carousel-inner,
+    .training .custom-carousel-btn {
+        margin-bottom: 20rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .female-main-section .title .line1 {
+        font-size: 3rem;
+    }
+
+    .female-main-section .buttons {
+        flex-direction: column;
+    }
+
+    .training .carousel-item p,
+    .training .carousel-item h2 {
+        font-size: 15px;
+    }
+
+    .price-main-section .form-control,
+    .form-section .form-control,
+    .contact .form-control,
+    .free-plan-section .form-control,
+    .form-login input,
+    .form-signup input,
+    .promo input {
+        width: 100%;
+    }
+
+    .requirement ul li {
+        font-size: 0.9rem !important;
+    }
+
+    hr {
+        width: 100% !important;
+    }
+
+    .form-login p,
+    .form-signup p {
+        font-size: 0.8rem;
+    }
+
+    .form-login h3,
+    .form-signup h3 {
+        font-size: 1.8rem;
+    }
+
+    footer .info {
+        font-size: 1rem;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-collapse img {
+        display: none;
+    }
+
+    .plan-header a {
+        padding: 0.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .plan-header a img {
+        width: 15px !important;
+        height: 15px !important;
+        margin-left: 4px;
+    }
+
+    .title .line1,
+    .title .line2 {
+        font-size: 2rem;
+    }
+
+    .main-section .description {
+        font-size: 0.9rem;
+    }
+
+    .female-main-section .description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .title .line1 {
+        font-size: 2rem;
+    }
+
+    .title .line2 {
+        font-size: 2rem;
+    }
+
+    .female-main-section .title .line1 {
+        font-size: 2rem;
+    }
+
+    .female-main-section .description {
+        font-size: 0.7rem;
+    }
+
+    .training .carousel-item p {
+        font-size: 10px;
+    }
+
+    .partners-title::after,
+    .packages-title::after,
+    .client-title::after {
+        width: 0;
+    }
+
+    .about-title,
+    .service-title,
+    .discover-title,
+    .partners-title,
+    .journey-title,
+    .training-title,
+    .champion-title,
+    .jobs-title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .price-main-section .form-control,
+    .form-section .form-control,
+    .contact .form-control,
+    .free-plan-section .form-control,
+    .form-login input,
+    .form-signup input,
+    .promo input {
+        width: 100%;
+    }
+
+    .price-main-section .form-label,
+    .form-section .form-label,
+    .contact .form-label,
+    .free-plan-section .form-label,
+    .form-login label,
+    .form-signup label,
+    .number {
+        margin-top: 1rem;
+    }
+
+    .result-text,
+    .activity .form-check-label,
+    .goal .form-check-label,
+    .requirement ul li {
+        font-size: 0.9rem !important;
+    }
+
+    .result-text small,
+    .activity .card.custom-radio-card p,
+    .goal .card.custom-radio-card p,
+    .job-summary-main-section .details span {
+        font-size: 0.8rem;
+    }
+
+    .result-info .card {
+        padding: 0.2rem !important;
     }
 }
 

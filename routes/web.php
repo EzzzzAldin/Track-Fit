@@ -16,6 +16,7 @@ Route::get('/free-plan', [WebController::class, 'freePlan'])->name('free-plan');
 Route::get('/job-summary', [WebController::class, 'jobSummary'])->name('job-summary');
 Route::get('/jobs', [WebController::class, 'jobs'])->name('jobs');
 Route::get('/price', [WebController::class, 'price'])->name('price');
+Route::get('/price/female', [WebController::class, 'price'])->name('price.female');
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/diet-plan', [DietPlanController::class, 'index'])->name('diet-plan');

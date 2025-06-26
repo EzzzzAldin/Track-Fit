@@ -19,10 +19,17 @@
         rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css" />
+    @if ($isFemale)
+        <link rel="stylesheet" href="{{ asset('css/female.css') }}">
+    @endif
 </head>
 
 <body>
-    @include('layouts.header')
+    @if ($isFemale)
+        @include('layouts.header-female')
+    @else
+        @include('layouts.header')
+    @endif
     <!-- Start Main Section -->
     <section class="price-main-section d-flex flex-column section-white">
 
@@ -195,7 +202,12 @@
     </section>
     <!-- End Main Section -->
     <!--Start Footer Section -->
-    @include('layouts.footer')
+    @if ($isFemale)
+        @include('layouts.footer-female')
+    @else
+        @include('layouts.footer')
+    @endif
+
     <!--End Footer Section -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -247,6 +259,44 @@
             });
         });
     </script>
+
+    @if ($isFemale)
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const navbar = document.querySelector(".navbar");
+                const logo = document.getElementById("navbar-logo-female");
+
+                function isOverWhiteSection() {
+                    const whiteSections = document.querySelectorAll(".section-white");
+                    const navbarHeight = navbar.offsetHeight;
+
+                    for (const section of whiteSections) {
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+
+                function updateNavbar() {
+                    const isWhite = isOverWhiteSection();
+
+                    navbar.classList.toggle("navbar-light", isWhite);
+                    navbar.classList.toggle("navbar-custom", !isWhite);
+
+                    logo.src = isWhite ?
+                        "{{ asset('imgs/logo-female2.png') }}" :
+                        "{{ asset('imgs/logo-female.png') }}";
+                }
+
+                window.addEventListener("scroll", updateNavbar);
+                window.addEventListener("resize", updateNavbar);
+                updateNavbar();
+            });
+        </script>
+    @endif
+
 </body>
 
 </html>

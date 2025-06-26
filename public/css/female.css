@@ -1,0 +1,36 @@
+.duration-details.selected {
+    border-color: var(--main-color-female);
+}
+
+.duration-details.selected .save {
+    background: linear-gradient(178deg, #ff288c, #d1106a);
+    color: var(--secondary-color);
+}
+
+.vip h5 {
+    font-family: var(--title-font);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--main-color-female);
+}
+
+.subscribe-btn,
+.female-subscribe-btn {
+    background: transparent;
+    background-color: var(--main-color-female) !important;
+    color: var(--secondary-color);
+    transition: background 0.4s ease, color 0.4s ease;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    z-index: 10000000;
+}
+
+.subscribe-btn:hover {
+    background: linear-gradient(178deg, var(--main-color-female), #be1b66);
+    color: var(--secondary-color);
+}
+
+.total-value {
+    color: var(--main-color-female);
+}

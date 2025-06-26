@@ -39,6 +39,16 @@
 
             </div>
         </div>
+        <div class="filter-wrapper">
+            <div class="filter-exercise">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Leg</button>
+                <button class="filter-btn">Core/Abs</button>
+                <button class="filter-btn">Chest</button>
+                <button class="filter-btn">Back</button>
+            </div>
+        </div>
+
         <div class="container mt-4">
             <div class="row g-3">
                 @for ($i = 0; $i < 6; $i++)
@@ -60,6 +70,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

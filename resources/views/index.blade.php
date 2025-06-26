@@ -37,7 +37,7 @@
                 <div class="buttons mt-4 d-flex gap-3 flex-wrap">
                     <a href="#" class="btn btn-main px-4 py-2">Our Packages</a>
                     <a href="#" class="btn btn-gradient-outline px-4 py-2">
-                        Get your free diet plan
+                        Get your free plan
                     </a>
                 </div>
             </div>
@@ -281,7 +281,7 @@
                                 <li>Visits to the bath complex</li>
                                 <li>Gym, fight club</li>
                             </ul>
-                            <button class="btn btn-join w-50">Join Now</button>
+                            <a href="{{ route('price') }}" class="btn btn-join w-50">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                                 <li>Visits to the bath complex</li>
                                 <li>Gym, fight club</li>
                             </ul>
-                            <button class="btn btn-join w-50">Join Now</button>
+                            <a href="{{ route('price') }}" class="btn btn-join w-50">Join Now</a>
                         </div>
                     </div>
                 </div>
@@ -323,7 +323,7 @@
                                 <li>Visits to the bath complex</li>
                                 <li>Gym, fight club</li>
                             </ul>
-                            <button class="btn btn-join w-50">Join Now</button>
+                            <a href="{{ route('price') }}" class="btn btn-join w-50">Join Now</a>
                         </div>
                     </div>
                 </div>

@@ -48,8 +48,9 @@ class WebController extends Controller
         return view('jobs');
     }
 
-    public function price()
+    public function price(Request $request)
     {
-        return view('price');
+        $isFemale = $request->routeIs('price.female');
+        return view('price', compact('isFemale'));
     }
 }

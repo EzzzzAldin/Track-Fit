@@ -15,12 +15,20 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
                 <li class="nav-item"><a class="nav-link" href="#join">Join Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('store') }}">Store</a></li>
                 <li class="nav-item"><a class="nav-link" href="#transformations">Transformations</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#career">Career</a></li>
             </ul>
 
-            <a href="{{ route('login') }}" class="btn subscribe-btn">Login</a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="{{ route('checkout') }}">
+                    <img src="{{ asset('imgs/Cart (1).png') }}" alt="Cart" style="width: 28px; height: 28px;">
+                </a>
+                <a href="{{ route('login') }}" class="btn subscribe-btn d-flex align-items-center gap-2">
+                    <span>Login</span>
+                </a>
+            </div>
         </div>
     </div>
 </nav>

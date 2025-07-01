@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="isFemale">
     <!-- Start Main Section -->
     @include('layouts.header-female')
     <section class="female-main-section d-flex flex-column">
@@ -242,6 +242,76 @@
         </div>
     </section>
     <!-- End Our Partners Section -->
+    <!-- Start Deal Section -->
+    <section class="deal section-white mb-5">
+        <div class="container">
+            <div class="card-deal">
+                <div class="deal-header">
+                    <img src="{{ asset('imgs/Marketing.png') }}" alt="Icon" class="deal-icon" />
+                    <h2 class="deal-title">Deal</h2>
+                </div>
+                <div class="deal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-2">
+                            <div class="offer-text-wrapper d-flex justify-content-center">
+                                <div class="offer-text position-relative d-inline-block text-center">
+                                    <h4>20%</h4>
+                                    <span class="off-label">off</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mt-4">
+                            <div class="custom-code-box ">
+                                <h4 class="mb-3">Get 20% off for your plan</h4>
+
+                                <div class="code-input-group d-flex align-items-center mb-4 flex-wrap gap-2">
+                                    <label class="mb-0 me-2">Code:</label>
+                                    <div class="position-relative flex-grow-1" style="max-width: 250px;">
+                                        <input type="text" class="form-control" id="couponCode" value="SAVE20" />
+                                        <i class="fa-regular fa-copy copy-icon position-absolute top-50 end-0 translate-middle-y me-2"
+                                            role="button"></i>
+                                    </div>
+                                </div>
+
+                                <div class="info-items d-flex gap-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="{{ asset('imgs/Users.png') }}" alt="icon" width="24"
+                                            height="24">
+                                        <small>available for 50 user</small>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <img src="{{ asset('imgs/Fire.png') }}" alt="icon" width="24"
+                                            height="24">
+                                        <small>Only 2 users left</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 mt-4">
+                            <div class="clock-offer">
+                                <div class="row">
+                                    <div class="col-3"></div>
+                                    <div class="col-2 time">
+                                        <h6>09</h6>
+                                        <h6>min</h6>
+                                    </div>
+                                    <div class="col-1 d-flex justify-content-center align-items-center"
+                                        style="color: #848484; font-size: 1.5rem">:</div>
+                                    <div class="col-2 time">
+                                        <h6>09</h6>
+                                        <h6>min</h6>
+                                    </div>
+                                    <div class="col-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Deal Section -->
     <!-- Start Our Packages Section -->
     <section class="our-packages female-packages section-white" id="join">
         <h2 class="packages-title fw-bold mb-3">Our Packages</h2>

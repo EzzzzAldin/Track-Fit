@@ -34,3 +34,16 @@
 .total-value {
     color: var(--main-color-female);
 }
+
+.box-payment.selected {
+    border: 1px solid var(--main-color-female);
+}
+
+.form-check-input:checked {
+    background-color: var(--main-color-female);
+    box-shadow: none;
+}
+
+.product-price {
+    color: var(--main-color-female);
+}

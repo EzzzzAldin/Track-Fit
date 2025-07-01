@@ -14,12 +14,18 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('female-home') }}">Ladies</a></li>
                 <li class="nav-item"><a class="nav-link" href="#join">Join Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('store') }}">Store</a></li>
                 <li class="nav-item"><a class="nav-link" href="#ladies-stories">Transformations</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('jobs') }}">Career</a></li>
             </ul>
 
-            <a href="{{ route('login') }}" class="btn female-subscribe-btn">Login</a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="{{ route('checkout.female') }}">
+                    <img src="{{ asset('imgs/Cart (1).png') }}" alt="Cart" style="width: 28px; height: 28px;">
+                </a>
+                <a href="{{ route('login') }}" class="btn female-subscribe-btn">Login</a>
+            </div>
         </div>
     </div>
 </nav>
